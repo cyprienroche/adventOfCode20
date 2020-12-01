@@ -6,10 +6,7 @@ fun main(args: Array<String>) {
     // expecting arguments of form: [day, i/o] eg. day1 file
     val day = if (args.isEmpty()) "" else args[0]
     val dayStringNumber = Regex("[0-9]+").find(day)
-    if (dayStringNumber == null || dayStringNumber.value.toInt() !in 1..25) {
-        println("Please enter a day number between 1 and 25")
-        return
-    }
+    if (dayStringNumber == null || dayStringNumber.value.toInt() !in 1..25) error("Please enter a day number between 1 and 25")
     val dayNumber = dayStringNumber.value.toInt()
 
     val scanner = if (args.size == 1) Scanner(System.`in`) else getScanner(dayNumber, "main")

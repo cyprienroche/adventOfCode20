@@ -44,10 +44,7 @@ fun findPairThatSumsToTarget(input: List<Int>, target: Int): Pair<Int, Int> {
 fun findTripleThatSumsToTarget(input: List<Int>, target: Int): Triple<Int, Int, Int> {
     input.forEachIndexed { index, it ->
         val (p, q) = findPairThatSumsToTarget(input.drop(index + 1), target - it)
-        if (p != -1)  {
-            return Triple(it, p, q)
-
-        }
+        if (p != -1) return Triple(it, p, q)
     }
     return Triple(-1,-1, -1)
 }
