@@ -12,12 +12,15 @@ fun main(args: Array<String>) {
     }
     val dayNumber = dayStringNumber.value.toInt()
 
-    val path = "src/main/resources/day$dayNumber/"
-    val scanner = if (args.size == 1) Scanner(System.`in`) else Scanner(File(path + "input.txt"))
-    val printStream = if (args.size == 1) PrintStream(System.out) else PrintStream(File(path + "output.txt"))
+    val scanner = if (args.size == 1) Scanner(System.`in`) else getScanner(dayNumber, "main")
+    val printStream = if (args.size == 1) PrintStream(System.out) else getPrintStream(dayNumber, "main")
 
     DayProblemFactory.getDayProblem(dayNumber, scanner, printStream).solve()
 
     println("process complete.")
     println("exit...")
 }
+
+fun getScanner(dayNumber: Int, folder: String) = Scanner(File("src/$folder/resources/day$dayNumber/input.txt"))
+
+fun getPrintStream(dayNumber: Int, folder: String) = PrintStream(File("src/$folder/resources/day$dayNumber/output.txt"))
