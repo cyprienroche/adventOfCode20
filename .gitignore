@@ -1,0 +1,14 @@
+#ignore intelliJ generated files
+*.iml
+.idea/
+out/
+
+#ignore gradle generated files
+.gradle/
+build/
+
+#ignore junk macOS generated files
+.DS_Store
+
+#ignore .zip files
+*.zip
