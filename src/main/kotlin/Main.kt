@@ -3,7 +3,7 @@ import java.io.PrintStream
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-    // expecting arguments of form: [day, i/o] eg. day1; file
+    // expecting arguments of form: [day, i/o] eg. day1 file
     val day = if (args.isEmpty()) "" else args[0]
     val dayStringNumber = Regex("[0-9]+").find(day)
     if (dayStringNumber == null || dayStringNumber.value.toInt() !in 1..25) {
