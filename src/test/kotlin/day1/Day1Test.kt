@@ -11,17 +11,6 @@ import kotlin.test.assertEquals
 class Day1Test {
 
     private val outContent = ByteArrayOutputStream()
-    private val originalOut = System.out
-
-    @Before
-    fun setupStreams() {
-        System.setOut(PrintStream(outContent))
-    }
-
-    @After
-    fun restoreStreams() {
-        System.setOut(originalOut)
-    }
 
     @Test
     fun `can find correct pair that sums to target`() {
