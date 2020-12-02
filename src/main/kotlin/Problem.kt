@@ -1,3 +1,4 @@
 interface Problem {
-    fun solve(): Unit
+    fun solvePart1(): Unit
+    fun solvePart2(): Unit
 }
