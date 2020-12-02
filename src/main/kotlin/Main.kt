@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     val scanner = if (args.size == 1) Scanner(System.`in`) else getScanner(dayNumber, "main")
     val printStream = if (args.size == 1) PrintStream(System.out) else getPrintStream(dayNumber, "main")
 
-    DayProblemFactory.getDayProblem(dayNumber, scanner, printStream).solve()
+    DayProblemFactory.getDayProblem(dayNumber, scanner, printStream).solvePart2()
 
     println("process complete.")
     println("exit...")

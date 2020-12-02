@@ -8,25 +8,28 @@ class Day2(private val scanner: Scanner, private val printStream: PrintStream) :
 
     private val pattern = """(\d+)-(\d+) (\w): (\w+)"""
 
-    override fun solvePart1() {
+    override fun solvePart1() = solve(::isValidPassword1)
+
+    override fun solvePart2() = solve(::isValidPassword2)
+
+    private fun solve(f: (Int, Int, Char, String) -> Int) {
         var count = 0
         while (scanner.hasNext()) {
             val input = scanner.nextLine()
-            println(input)
 
             val match = Regex(pattern).find(input)!!
-            val (min, max, char, password) = match.destructured
-            val range = min.toInt().rangeTo(max.toInt())
-            count += isValidPassword(range, char[0], password)
+            val (i, j, char, password) = match.destructured
+            count += f(i.toInt(), j.toInt(), char[0], password)
         }
         printStream.println(count)
         return
     }
-
-    override fun solvePart2() {
-        return
-    }
 }
 
-fun isValidPassword(range: IntRange, char: Char, password: String): Int =
-    if (password.count { it == char } in range) 1 else 0
+fun isValidPassword1(min: Int, max: Int, char: Char, password: String): Int =
+    if (password.count { it == char } in min..max) 1 else 0
+
+fun isValidPassword2(pos1: Int, pos2: Int, char: Char, password: String): Int =
+    if ((pos1 - 1 in password.indices && password[pos1 - 1] == char).xor(
+        pos2 - 1 in password.indices && password[pos2 - 1] == char))
+        1 else 0
