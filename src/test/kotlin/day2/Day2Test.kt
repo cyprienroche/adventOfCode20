@@ -1,14 +1,10 @@
 package day2
 
 import getScanner
-import org.junit.After
-import org.junit.Before
 import org.junit.Test
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import kotlin.test.assertEquals
-import kotlin.test.assertFalse
-import kotlin.test.assertTrue
 
 class Day2Test {
 
