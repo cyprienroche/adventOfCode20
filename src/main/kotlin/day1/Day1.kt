@@ -14,17 +14,13 @@ class Day1(private val scanner: Scanner, private val printStream: PrintStream): 
         }
     }
 
-    override fun solve(): Unit {
-        solvePart2()
-    }
-
-    fun solvePart1() {
+    override fun solvePart1() {
         load()
         val (p, q) = findPairThatSumsToTarget(input, target = 2020)
         printStream.println(p * q)
     }
 
-    fun solvePart2() {
+    override fun solvePart2() {
         load()
         val (p, q, r) = findTripleThatSumsToTarget(input, target = 2020)
         printStream.println(p * q * r)
