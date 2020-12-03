@@ -4,7 +4,7 @@ import Problem
 import java.io.PrintStream
 import java.util.Scanner
 
-class Day1(private val scanner: Scanner, private val printStream: PrintStream): Problem {
+class Day1(private val scanner: Scanner, private val printStream: PrintStream) : Problem {
 
     private val input = mutableListOf<Int>()
 
@@ -34,7 +34,7 @@ fun findPairThatSumsToTarget(input: List<Int>, target: Int): Pair<Int, Int> {
         if (set.contains(complement)) return Pair(complement, it)
         set.add(it)
     }
-    return Pair(-1,-1)
+    return Pair(-1, -1)
 }
 
 fun findTripleThatSumsToTarget(input: List<Int>, target: Int): Triple<Int, Int, Int> {
@@ -42,5 +42,5 @@ fun findTripleThatSumsToTarget(input: List<Int>, target: Int): Triple<Int, Int, 
         val (p, q) = findPairThatSumsToTarget(input.drop(index + 1), target - it)
         if (p != -1) return Triple(it, p, q)
     }
-    return Triple(-1,-1, -1)
+    return Triple(-1, -1, -1)
 }

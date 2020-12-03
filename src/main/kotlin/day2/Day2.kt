@@ -31,5 +31,7 @@ fun isValidPassword1(min: Int, max: Int, char: Char, password: String): Int =
 
 fun isValidPassword2(pos1: Int, pos2: Int, char: Char, password: String): Int =
     if ((pos1 - 1 in password.indices && password[pos1 - 1] == char).xor(
-        pos2 - 1 in password.indices && password[pos2 - 1] == char))
+            pos2 - 1 in password.indices && password[pos2 - 1] == char
+        )
+    )
         1 else 0

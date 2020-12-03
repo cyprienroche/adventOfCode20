@@ -12,15 +12,15 @@ class Day2Test {
 
     @Test
     fun canRecogniseValidPassword1() {
-        assertEquals(1, isValidPassword1(1,4, 'a', "abc"))
-        assertEquals(1, isValidPassword1(1,4, 'a', "aaaa"))
-        assertEquals(1, isValidPassword1(1,3, 'z', "pazzword"))
+        assertEquals(1, isValidPassword1(1, 4, 'a', "abc"))
+        assertEquals(1, isValidPassword1(1, 4, 'a', "aaaa"))
+        assertEquals(1, isValidPassword1(1, 3, 'z', "pazzword"))
     }
 
     @Test
     fun canRecogniseInvalidPassword1() {
-        assertEquals(0, isValidPassword1(1,4, 'a', "aaaaa"))
-        assertEquals(0, isValidPassword1(1,3, 'z', "pazzzzword"))
+        assertEquals(0, isValidPassword1(1, 4, 'a', "aaaaa"))
+        assertEquals(0, isValidPassword1(1, 3, 'z', "pazzzzword"))
     }
 
     @Test
@@ -34,16 +34,16 @@ class Day2Test {
 
     @Test
     fun canRecogniseValidPassword2() {
-        assertEquals(1, isValidPassword2(1,4, 'a', "abcd"))
-        assertEquals(1, isValidPassword2(1,4, 'a', "baaa"))
-        assertEquals(1, isValidPassword2(1,3, 'z', "pazzword"))
+        assertEquals(1, isValidPassword2(1, 4, 'a', "abcd"))
+        assertEquals(1, isValidPassword2(1, 4, 'a', "baaa"))
+        assertEquals(1, isValidPassword2(1, 3, 'z', "pazzword"))
     }
 
     @Test
     fun canRecogniseInvalidPassword2() {
-        assertEquals(0, isValidPassword2(1,4, 'a', "abca"))
-        assertEquals(0, isValidPassword2(1,4, 'a', "bbbb"))
-        assertEquals(0, isValidPassword2(1,2, 'z', "pazzzzword"))
+        assertEquals(0, isValidPassword2(1, 4, 'a', "abca"))
+        assertEquals(0, isValidPassword2(1, 4, 'a', "bbbb"))
+        assertEquals(0, isValidPassword2(1, 2, 'z', "pazzzzword"))
     }
 
 
