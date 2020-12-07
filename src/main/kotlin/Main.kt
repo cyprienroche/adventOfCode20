@@ -6,8 +6,8 @@ import java.util.Scanner
 fun main(args: Array<String>) {
     // expecting arguments of form: [day, i/o] eg. day1 file
     val today = LocalDate.now().dayOfMonth
-    val day = if (args.isEmpty()) "$today" else args[0]
-//    val day = "1"
+//    val day = if (args.isEmpty()) "$today" else args[0]
+    val day = "5"
 
     val dayStringNumber = Regex("[0-9]+").find(day)!!
     if (dayStringNumber.value.toInt() !in 1..25) error("Please enter a day number between 1 and 25")
