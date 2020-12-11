@@ -6,6 +6,8 @@ import day2.Day2
 import day3.Day3
 import day4.Day4
 import day5.Day5
+import day6.Day6
+import day7.Day7
 
 class DayProblemFactory {
 
@@ -16,6 +18,8 @@ class DayProblemFactory {
             3 -> Day3(scanner, printStream)
             4 -> Day4(scanner, printStream)
             5 -> Day5(scanner, printStream)
+            6 -> Day6(scanner, printStream)
+            7 -> Day7(scanner, printStream)
             else -> throw IllegalArgumentException()
         }
     }
