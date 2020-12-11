@@ -1,13 +1,11 @@
-package day6
+package day
 
+import day.Day6
 import getScanner
 import org.junit.Test
 import java.io.ByteArrayOutputStream
-import java.io.File
 import java.io.PrintStream
-import java.util.*
 import kotlin.test.assertEquals
-import kotlin.test.assertNull
 
 class Day6Test {
 

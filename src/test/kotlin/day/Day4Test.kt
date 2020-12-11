@@ -1,5 +1,7 @@
-package day4
+package day
 
+import day.Day4
+import day.Passport
 import getScanner
 import org.junit.Test
 import java.io.ByteArrayOutputStream
@@ -46,13 +48,14 @@ class Day4Test {
         val output = outContent.toString().trimMargin().toInt()
         assertEquals(0, output)
     }
-}
 
-fun getScanner(dayNumber: Int, folder: String, fileName: String): Scanner {
-    val input = File("src/$folder/resources/day$dayNumber/$fileName.txt")
-    return if (input.exists()) {
-        Scanner(input)
-    } else {
-        error("Please create an input.txt file inside resources/day$dayNumber")
+    private fun getScanner(dayNumber: Int, folder: String, fileName: String): Scanner {
+        val input = File("src/$folder/resources/day$dayNumber/$fileName.txt")
+        return if (input.exists()) {
+            Scanner(input)
+        } else {
+            error("Please create an input.txt file inside resources/day$dayNumber")
+        }
     }
 }
+

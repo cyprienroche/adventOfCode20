@@ -1,13 +1,13 @@
-package day5
+package day
 
+import day.Day5
+import day.encodeBoardingPass
+import day.missingNumber
 import getScanner
 import org.junit.Test
 import java.io.ByteArrayOutputStream
-import java.io.File
 import java.io.PrintStream
-import java.util.*
 import kotlin.test.assertEquals
-import kotlin.test.assertNull
 
 class Day5Test {
 

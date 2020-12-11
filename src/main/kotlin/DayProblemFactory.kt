@@ -1,13 +1,13 @@
+import day.Day1
+import day.Day2
+import day.Day3
+import day.Day4
+import day.Day5
+import day.Day6
+import day.Day7
 import java.io.PrintStream
 import java.lang.IllegalArgumentException
 import java.util.Scanner
-import day1.Day1
-import day2.Day2
-import day3.Day3
-import day4.Day4
-import day5.Day5
-import day6.Day6
-import day7.Day7
 
 class DayProblemFactory {
 

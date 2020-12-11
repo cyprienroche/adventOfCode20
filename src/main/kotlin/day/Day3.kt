@@ -1,4 +1,4 @@
-package day3
+package day
 
 import Problem
 import java.io.PrintStream

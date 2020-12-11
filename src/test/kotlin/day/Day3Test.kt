@@ -1,4 +1,4 @@
-package day3
+package day
 
 import getScanner
 import org.junit.Test

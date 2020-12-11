@@ -1,4 +1,4 @@
-package day4
+package day
 
 import Problem
 import java.io.PrintStream
@@ -39,8 +39,6 @@ class Day4(private val scanner: Scanner, private val printStream: PrintStream) :
         while (scanner.hasNext()) {
             passport = nextPassport()
             if (passport != null && passport.allFieldsValid()) count++
-            println(passport)
-            println(passport?.isValidPID())
         }
         printStream.println(count)
     }
